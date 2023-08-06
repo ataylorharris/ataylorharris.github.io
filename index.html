@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script></script>
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  
+     @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .bar {
+      color:hsl(0, 0%, 100%);
+      position: relative;
+      text-align: right;
+      
+     
+      
+    }
+    #copyright {
+      font-size: 8px; 
+      color:hsl(0, 2%, 62%);
+      display: flex; 
+      margin-left: 1010px; 
+      margin-bottom: -30px;
+     
+
+    }
+    .icons {
+      display: flex; 
+      gap: 10px; 
+      margin-left: 1080px;
+      margin-top: -46px; 
+      height: 13px;
+    }
+    #footerlogo {
+      height: 25px;
+       margin-right: 990px;
+        margin-bottom: -36px;
+    }
+    .mb { 
+      display: none;
+    }
+
+    .nav{
+      position: absolute;
+      top: -50px;
+    right: 106px;
+    font-family: alata;
+    
+ 
+    
+    padding: 10px;
+  
+  
+     
+    }
+
+    .nav a {
+      width: 45%;
+      padding: 8px;
+    }
+   
+   .nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      
+     
+    }
+   .nav a:after {
+      background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+    }
+   .nav a:hover:after { 
+      width: 100%; 
+  left: 0; 
+}
+
+
+    
+    .logo {
+      position:absolute;
+      top: -20px;
+      left: 150px;
+      width: 120px;
+    }
+    #box {
+      position:absolute;
+      top: 80px;
+      left: 146px;
+      border: solid;
+      width: 579px;
+      height: 240px;
+      text-align: left;
+      background-size: cover;
+      font-family: JoseFin Sans;
+      text-align:left;
+      font-size: 30px;
+      justify-content: center;
+      padding-left: 30px;
+      padding-bottom: 30px;
+      color: hsl(0, 0%, 100%);
+      font-weight: thin;
+     
+
+     
+      
+
+    }
+    li {
+      display: inline;
+      color:white;
+      
+    }
+
+    a:link {
+      text-decoration: none;
+      color:white;
+}
+    #hero {
+     
+      width: 1440px;
+      height: 500px;
+      top: 400px;
+      height: 500px;
+      padding:0px;
+      margin-left: -50px;
+      margin-top: -80px;
+    }
+    h1 {
+      margin-left: auto;
+     
+    }
+    .creations {
+      display:inline-grid;
+   
+      position: relative;
+      margin-left:145px;
+      margin-top: 150px;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: 300px 300px;
+      grid-gap: 15px;
+      grid-row-gap: 170px;
+      color:white;
+      font-family: JoseFin Sans;
+      height: 300px;
+     
+    }
+    
+   button {
+    background:rgb(255, 255, 255);
+    position:relative;
+    color:rgb(0, 0, 0);
+    border: 2px solid #000000;
+    margin-left: 1100px;
+    font-family: Alata;
+    height: 30px;
+    width: 120px;
+    bottom: -110px;
+   }
+
+   button:hover {
+    background-color: black;
+    color:white;
+   }
+
+#mobilehero {
+  display:none;
+}
+#sidebar {
+  width: 0%;
+  background-color: black;
+  height: 100%;
+  font-size: 30px;
+  font-family:  Josefin Sans;
+  display: none;
+
+ 
+}
+
+#sidebar li {
+  
+  display:block;
+  bottom: -100px;
+  margin-top:30px;
+  top: 100px;
+  
+  margin-left: 10px;
+  padding: 0;
+}
+
+#sidebar ul {
+  margin-top: 170px;
+}
+
+#close {
+  position: absolute;
+
+}
+footer {
+  position: absolute;
+   left: 0;
+   bottom: -1800px;
+   width: 1440px;
+   height: 120px;
+   background-color: rgb(0, 0, 0);
+   color: white;
+   text-align: center;
+   font-family: alata;
+   font-size: 10px;
+
+}
+footer
+   #example {
+     margin-left: 60px;
+     
+    
+   }
+   #example1 {
+    display: none;
+    margin-left: 440px;
+   }
+
+
+  footer a {
+      color: rgb(242, 242, 242);
+      text-decoration: none;
+      position: relative;
+      
+     
+    }
+   footer a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  bottom:auto;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+    }
+ footer a:hover:after { 
+      width: 100%; 
+  left: 0; 
+}
+   #ex { 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height:100vh;
+    width: 100%;
+    margin-left: -38px;
+
+    
+    
+    
+   }
+   #backstory {
+    border: none;
+    margin-top: -350px;
+    margin-left: 1029px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    font-family: Alata;
+    font-weight: 300;
+    padding: 60px;
+    padding-left: 100px;
+    font-size: 16px;
+    height: 0px;
+  
+    
+
+    
+   }
+   body{
+    overflow-x:hidden;
+    -webkit-text-size-adjust: none;
+}
+#sidebar {
+  background-color:black;
+  display:none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+    left: 0;
+    z-index: 100;
+ 
+}
+.mobilecreations{
+  display:none;
+  
+
+}
+.footernav {
+ display: flex;
+  gap: 20px; 
+  margin-top: 52px; 
+  margin-left: 110px;
+  font-size: 14px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .footernav {
+    display: block;
+    margin-left: -1070px;
+
+    
+    
+  
+  }
+  #footerlogo {
+    margin-left: -10px;
+  }
+  #copyright {
+    margin-left: 130px;
+   margin-top: 44px;
+   
+  }
+  .footernav li {
+    line-height: 30px;
+
+  }
+  .icons {
+   margin-left: 160px;
+   top: 280px;
+   position: absolute;
+      
+   }
+    #mobilelogo {
+      display: block;
+     
+      
+      
+    }   
+   .creations {
+    display: none;
+   }
+   #backstory {
+     margin-left: 200px;
+     font-size: 17px;
+     margin-top: -530px;
+     text-align:center;
+    display: relative;
+    height: 10px;
+   
+ 
+     
+    
+    
+   }
+  
+   .mb {
+    display: block;
+   }
+    #leader {
+      font-size: 10px;
+    }
+  #hero {
+    display:none;
+  }
+   
+   .mobilecreations{ 
+    display:grid;
+     margin-top:-20px;
+    position: absolute;
+   margin-left: 30px;
+   color: hsl(0, 0%, 100%);
+   grid-gap: 20px;
+   font-weight: thin;
+   font-family: JoseFin Sans;
+
+   }
+   #cfont {
+    
+    margin-top: 800px;
+    margin-left: -85px;
+    position:absolute;
+    width: 800px;
+  
+ 
+   }
+   #cfont1 {
+    top: -870px;
+    display: inline-block;
+    left: 8px;
+   }
+  
+   button {
+    top: 1150px;
+    right: 990px;
+    width: 190px;
+    height: 50px;
+
+   }
+
+   #example {
+   display:none;
+   }
+   footer{
+    height: 650px;
+    margin-bottom: -600px;
+    
+  
+   }
+  
+   .nav1 {
+    display: flex;
+   
+    width: 100px;
+    height: 100%;
+ 
+
+   }
+   #example1 {
+    display: block;
+    position: absolute;
+    margin-top: 100px;
+    height: 600px;
+   }
+   .desk {
+    display: none;
+   }
+
+  
+#mobilehero {
+  display:block;
+  height: 470px;
+  width: 500px;
+  top: 0;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+#sidebar {
+
+  display: none;
+
+  
+
+}
+.bars1 {
+ top: -425px;
+ left: -810px;
+ background: none;
+ color:white;
+ display:block;
+ height: 20px;
+}
+
+
+
+
+body {
+  min-height: 100vh;
+  
+}
+.box {
+  display:absolute;
+
+}
+.nav1 {
+  margin-left: -20px;
+}
+
+}
+
+  </style>
+<script>
+function fade(x)
+{
+x.style.opacity = "0.5";
+
+
+
+x.style.color = "hsl(0, 0%, 0%)"
+}
+function fade1(x)
+{
+x.style.opacity = "0.5";
+
+
+
+x.style.color = " hsl(0, 0%, 41%)"
+}
+function back(x) {
+  x.style.opacity = "1";
+  x.style.color = "white";
+}
+
+
+function sidebarintro() {
+ 
+  document.getElementById("sidebar").style.width = "100%";
+  document.getElementById("sidebar").style.height = "100%";
+  document.getElementById("sidebar").style.display = "block";
+}
+ function sidebarexit () {
+  document.getElementById("sidebar").style.width = "0%";
+  document.getElementById("sidebar").style.width = "0%"
+  document.getElementById("sidebar").style.display = "none";
+ }
+
+</script>
+</head>
+<body>
+<header>
+  <div style="display: relative"><img  id = "mobilehero" src="mobile-hero.jpg">
+    <div id="box" style="margin-left:-120px;margin-top: 50px; font-size: 18px;width: 330px; height: 150px; border-width: 1px; color:rgb(255, 249, 249)"> <h1><span >IMMERSIVE<br>EXPERIENCES<br>
+      THAT <br> DELIVER</span></h1></div>
+    </div>
+
+    <div style=" position: absolute; top: 40px; left: 40px; ">  <img  id = " "src="logo.svg"></div>
+    <button class = "bars1" onclick="sidebarintro()" style="font-size:24px; border:none; background-color:none;"> <i class="fa fa-bars"></i></button>
+
+<div class="bar">
+   
+
+  <img id="hero" src="image-hero.jpg">
+
+  <img class="logo" src="logo.svg">
+  <div class="nav">
+   <ul>
+    <li ><a  href="about"><span  onmouseover="under(this)" onmouseout="over(this)">About</span></a></li>
+    <li><a href="careers">Careers</a></li>
+    <li><a href="Events">Events</a> </li>
+    <li><a href="Products">Products</a></li>
+    <li><a href="support">Support</a></li>
+  </ul>
+  </div>
+ 
+ 
+ <div id="box"> <h1><span >IMMERSIVE<br>EXPERIENCES<br>
+  THAT DELIVER</span></h1></div>
+</header>
+</div>
+<div id="mid" style="margin-left: -400px; margin-top: -60px;">
+<div id = "ex">
+  <img  id = "example" src="image-interactive.jpg" style="height:330px; width: 580px; position:relative;">
+  <img  id = "example1" src="image-interactive.jpg" style="height:200px; width: 360px; position:relative; margin-bottom: 450px; margin-right: -40px">
+</div>
+  <div id = "backstory" style="width: 600px;height: 200px; margin-bottom: 70px; "><span id ="leader" style="font-size: 40px;"><div></div>THE LEADER  IN<br> INTERACTIVE VR</span><br><br>
+    <span style="text-align: center; color:hsl(0, 0%, 41%);">
+    
+    Founded in 2011, Loopstudios has been <br class="mb"> producing world-class <br class="desk"> virtual reality <br class="mb">
+    projects for some of the best companies <br class="mb"> around the<br class="desk"> globe. Our award-winning <br class="mb">
+    creations have transformed <br class="desk"> businesses <br class="mb">through digital experiences that bind 
+    to<br class="mb"> their brand. </span></div>
+ 
+</div>
+</div>
+
+
+<button>SEE  ALL</button>
+
+<div id="cfont"><span id="cfont1" style= "  bottom: -540px;  position: absolute; margin-left: 150px; font-size: 28px; font-family: Josefin Sans; align-items: right;">OUR CREATIONS</div></span>   </div>
+  <DIV class = "creations">
+
+  <a><div onmouseover="fade1(this)" onmouseout="back(this)"> <div  style="  position: absolute; top: 348px; left: 26px;"><h2>DEEP<br>EARTH</h2></div><img src="image-deep-earth.jpg">
+</div></a>
+ 
+  
+ <a> <div onmouseover="fade(this)" onmouseout="back(this)"><img  src="image-night-arcade.jpg"><h2 style="position:absolute; top: 348px; left: 319px;">NIGHT<br>ARCADE</h2></div></a>
+  <a><div img onmouseover="fade(this)" onmouseout="back(this)"><img  src="image-soccer-team.jpg"><h2 style="position:absolute; top: 345px; left: 620px; ">  SOCCER <br> TEAM VR</h2></div></a>
+
+ <a><div onmouseover="fade(this)" onmouseout="back(this)"><img src="image-grid.jpg"><h2 style="position: absolute; top: 340px; left: 878px;"> THE <br> GRID</h2></div>
+ </a> 
+
+  <a><div onmouseover="fade(this)" onmouseout="back(this)"><img src="image-from-above.jpg"><h2 style="position: absolute; left: 50px; top: 820px;"> FROM UP <br> ABOVE VR</h2></div></a>
+ <a> <div onmouseover="fade1(this)" onmouseout="back(this)"><img src="image-pocket-borealis.jpg"><h2 style="position: absolute; top: 820px; left:322px"> POCKET<br> BOREALIS</h2></div></a>
+
+ <a><div onmouseover="fade(this)" onmouseout="back(this)"><img  src="image-curiosity.jpg"><h2 style="position: absolute; top: 820px; left: 568px;">  THE <br> CURIOSITY</h2></div></a> 
+ <a> <div onmouseover="fade(this)" onmouseout="back(this)"><img  src="image-fisheye.jpg"><h2 style="position: absolute; top: 820px; left: 870px;">   MAKE IT <br> FISHEYE</h2><</div>
+ </a>
+</DIV>
+
+<div class="mobilecreations">
+ 
+ <a> <img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-deep-earth.jpg"> <h2 style="margin-top: -80px; margin-left: 20px;">DEEP<br>EARTH</h2> </a>
+ <a> <img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-night-arcade.jpg"><h2 style="margin-top: -80px; margin-left: 20px;">NIGHT<br> ARCADE</h2></a>
+  <a><img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-soccer-team.jpg"><h2 style="margin-top: -80px; margin-left: 20px;">SOCCER <br> TEAM VR</h2></a>
+  <a><img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-grid.jpg"><h2 style="margin-top: -80px; margin-left: 20px;">THE <br> GRID</h2></a>
+ <a><img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-from-above.jpg"><h2 style="margin-top: -80px; margin-left: 20px;">FROM UP<br> ABOVE VR</h2></a> 
+  <a><img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-pocket-borealis.jpg"><h2 style="margin-top: -80px; margin-left: 20px;">POCKET BOREALIS</h2></a><br>
+ <a> <img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-curiosity.jpg"><h2 style="margin-top: -80px; margin-left: 20px;">THE <br> CURIOSITY</h2></a>
+ <a> <img  style="width: 90%; margin-left: auto; margin-right: auto;"src="mobile-fisheye.jpg"><h2 style="margin-top: -80px; margin-left: 20px;">MAKE IT <br> FISHEYE</h2></a>
+</div>
+  
+
+<div id="sidebar">
+  <img src="logo.svg" style="margin-left: 25px; margin-top: 40px;"> 
+  <div style="margin-top: -65px; margin-left: 158px; font-size: 68px">
+  
+    <a  style="margin-left: 190px; "href="javascript:void(0)" class="close" onclick="sidebarexit()">×</a>
+    </div>
+  <ul>
+    <li ><a  href="about"><span onmouseover="under(this)" onmouseout="over(this)">ABOUT</span></a></li>
+    <li><a href="careers">CAREERS</a></li>
+    <li><a href="Events">EVENTS</a> </li>
+    <li><a href="Products">PRODUCTS</a></li>
+    <li><a href="support">SUPPORT</a></li>
+  </ul>
+
+
+</div>
+  
+
+  
+
+
+
+ 
+  <footer>
+    <div id="nav1">
+    <img  id="footerlogo" style = "" src="logo.svg">
+    <ul class="footernav" >
+     <li ><a href="about">About </a></li>
+     <div class="mobilenav"><li> <a href="Careers">Careers</a></li></div> 
+    <div class="mobilenav1"> <li><a href=" Events"> Events</a></li> </div>
+    <div class="mobilenav2"> <li><a href="Products"> Products</a></li> </div>
+     <div class="mobilenav3"><li><a href="Support"> Support</a></li> </div>
+      </ul>
+     </div>
+    <div id="copyright">© 2021 Loopstudios. All rights reserved.</div>
+      <div class="icons">
+      <a><img style="height: 15px"id="facebook" src="icon-facebook.svg"></a>
+       <a><img style="height: 15px" id="twitter" src="icon-twitter.svg"></a> 
+       <a> <img style="height: 15px" id="pinterest" src="icon-pinterest.svg"></a>
+       <a> <img style="height: 15px" id="instagram" src="icon-instagram.svg"></div></a> 
+      
+
+    </div>
+  </div>
+   </footer>
+   
+</body>
+
+</html>
